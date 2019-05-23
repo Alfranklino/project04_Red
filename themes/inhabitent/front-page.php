@@ -21,7 +21,7 @@ get_header(); ?>
 <?php /* Start the Loop */ ?>
 <?php while (have_posts()) : the_post(); ?>
 
-	<!-- <?php get_template_part('template-parts/content'); ?> -->
+	 <?php get_template_part('template-parts/content'); ?> 
 
 <?php endwhile; ?>
 
@@ -32,9 +32,9 @@ get_header(); ?>
 <?php get_template_part('template-parts/content', 'none'); ?>
 
 <?php endif; ?>
-		<h1>TEST INTO HOME</h1>
+		
 	</main><!-- #main -->
 </div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

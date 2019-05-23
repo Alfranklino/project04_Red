@@ -79,6 +79,11 @@ function red_starter_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
 }
 add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
 
+function get_external_css(){
+	wp_enqueue_style('fontawesome','https://use.fontawesome.com/releases/v5.8.2/css/all.css',false);
+}
+add_action('wp_enqueue_scripts', 'get_external_css');
+
 /**
  * Enqueue scripts and styles.
  */
@@ -103,3 +108,5 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+

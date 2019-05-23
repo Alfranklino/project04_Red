@@ -50,3 +50,6 @@ uploads/wp-migrate-db/
 # Ignore packages #
 # =============== #
 themes/inhabitent/node_modules/
+# Ignore every assets. #
+# =========================== #
+themes/inhabitent/git_ignore_needed_assets/
