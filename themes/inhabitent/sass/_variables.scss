@@ -17,7 +17,8 @@ $color__border-abbr: #666;
 
 $color__link: royalblue;
 $color__link-visited: purple;
-$color__link-hover: midnightblue;
+$color__link-hover: #2f1339;
+$color__link-white-hover: #f0e4d1;
 
 $color__title-footer: #d99054;
 
@@ -32,5 +33,7 @@ $font__line-height-pre: 1.6;
 // Paths
 
 $path__bkg-footer: '../../images/dark-wood.png';
+$path__bkg-banner: '../../images/about-hero.jpg';
+
 $path__font-merriweather: '../../fonts/Merriweather';
 $path__font-novecento: '../../fonts/Novecento';

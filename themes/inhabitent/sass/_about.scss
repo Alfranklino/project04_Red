@@ -1,0 +1,30 @@
+.page-id-25 {
+  .entry-header {
+    display: flex;
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url($path__bkg-banner);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 500px;
+    color: white;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav {
+    
+
+    a {
+      &:visited {
+        color: white;
+      }
+
+      &:hover {
+        color: $color__link-white-hover;
+      }
+    }
+
+   
+  }
+}

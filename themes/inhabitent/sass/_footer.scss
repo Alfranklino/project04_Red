@@ -1,23 +1,16 @@
 footer {
-  height: 250px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 30px;
+  height: 330px;
+  padding-left: 80px;
+  padding-right: 100px;
+  padding-top: 10px;
   background-image: url($path__bkg-footer);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 4fr 1fr;
+  grid-template-rows: 5fr 1fr;
   color: white;
   font-family: 'Merriweather-normal';
 
-  .spaced {
-    margin-right: 10px;
-  }
-
-  .li-group li {
-    display: block;
-  }
-
+  
   .title {
     color: $color__title-footer;
     margin-top: 0px;
@@ -25,25 +18,22 @@ footer {
     font-family: 'Novecento-bold'
   }
 
-  section{
-      ul{
-          margin-left: 0px;
-          padding-left: 0px;
-      }
-
-      .li-item{
-          margin-bottom: 8px;
-      }
+  .spaced {
+    margin-right: 10px;
   }
-
-  .contact-info {
+  
+  .contact-info-2 {
     grid-column: 1/2;
     grid-row: 1/2;
-  }
+    
+  } 
 
-  .business-hours {
+ 
+
+  .buz-hours-4 {
     grid-column: 2/3;
     grid-row: 1/2;
+    
   }
 
   .logo {
@@ -57,4 +47,5 @@ footer {
     justify-self: center;
     font-family: 'Novecento-normal'
   }
+  
 }

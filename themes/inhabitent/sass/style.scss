@@ -64,4 +64,30 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "media";
 @import "page-templates";
 @import "footer";
+@import "about";
 
+.page-template-default {
+  header {
+    nav {
+      position: absolute;
+      display: grid;
+      grid-template-columns: 1fr 4fr 3fr;
+      grid-template-rows: 1fr;
+
+      img {
+        height: 40px;
+        grid-column: 1/2;
+      }
+
+      .menu {
+        grid-column: 3/4;
+        align-self: center;
+        justify-self: end;
+
+        ul .page_item{
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}

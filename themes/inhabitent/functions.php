@@ -59,13 +59,31 @@ function red_starter_widgets_init() {
 		'name'          => esc_html( 'Sidebar' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<p class="title">',
+		'after_title'   => '</p>',
 	) );
 }
 add_action( 'widgets_init', 'red_starter_widgets_init' );
+
+/* widget for the footer*/
+function red_starter_footer_widgets_init() {
+	register_sidebar( array(
+		'name'          => esc_html( 'Footer' ),
+		'id'            => 'footer-widget',
+		'description'   => '',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<p class="title">',
+		'after_title'   => '</p>',
+	) );
+}
+add_action( 'widgets_init', 'red_starter_footer_widgets_init' );
+
+
+
+
 
 /**
  * Filter the stylesheet_uri to output the minified CSS file.
@@ -87,12 +105,29 @@ add_action('wp_enqueue_scripts', 'get_external_css');
 /**
  * Enqueue scripts and styles.
  */
+
+add_action('init', 'customs_register_scripts');
+function customs_register_scripts() {
+	wp_deregister_script('jquery');
+	wp_register_script('jquery', 'https://code.jquery.com/jquery-3.4.1.min.js');
+	wp_register_script( 'red-starter-js-customs', get_template_directory_uri() . '/build/js/js-customs.min.js', array('jquery'));
+}
+
+//Enqueue Scripts
+add_action('wp_enqueue_scripts', 'customs_enqueue_scripts');
+function customs_enqueue_scripts() {
+	wp_enqueue_script("jquery");
+    wp_enqueue_script('red-starter-js-customs');
+}
+
 function red_starter_scripts() {
 	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
-
+	// wp_deregister_script('jquery');
+	// wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.4.1.min.js');
 	wp_enqueue_script( 'red-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
-
+	
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -108,5 +143,3 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
-
-
