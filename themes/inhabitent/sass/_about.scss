@@ -1,20 +1,37 @@
 .page-id-25 {
   .entry-header {
     display: flex;
-    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url($path__bkg-banner);
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url($path__bkg-banner-about);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
-    height: 500px;
+    height: 100vh;
     color: white;
     width: 100%;
     justify-content: center;
     align-items: center;
+    
+  }
+
+  .entry-content {
+    padding-left: $base__indent-unit *2.2;
+    padding-right: $base__indent-unit *2.2;
+
+    h2{
+      display:flex;
+      justify-content: center;
+      font-family: 'Novecento-bold';
+      font-size: $base__space-unit *1.5;
+      
+    }
+  }
+
+  .entry-title {
+    font-size: $base__space-unit * 2;
+
   }
 
   nav {
-    
-
     a {
       &:visited {
         color: white;
@@ -24,7 +41,5 @@
         color: $color__link-white-hover;
       }
     }
-
-   
   }
 }

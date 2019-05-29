@@ -65,29 +65,48 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "page-templates";
 @import "footer";
 @import "about";
+@import "single-post";
 
-.page-template-default {
-  header {
-    nav {
-      position: absolute;
-      display: grid;
-      grid-template-columns: 1fr 4fr 3fr;
-      grid-template-rows: 1fr;
+// .page-template-default,
+// .single-post {
+//   .site-header {
+//     border-bottom: 1px solid $color__border-solid;
+//     // margin-top: 0;
+//     margin-bottom: 50px;
+//     nav {
+//       width: 1120px;
+//       margin-left: auto;
+//       margin-right: auto;
+//       // position: absolute;
+//       display: grid;
+//       grid-template-columns: 1fr 4fr 3fr;
+//       grid-template-rows: 1fr;
 
-      img {
-        height: 40px;
-        grid-column: 1/2;
-      }
+//       img {
+//         position: absolute;
+//         height: 40px;
+//         grid-column: 1/2;
+//       }
 
-      .menu {
-        grid-column: 3/4;
-        align-self: center;
-        justify-self: end;
+//       .menu {
+//         grid-column: 3/4;
+//         align-self: center;
+//         justify-self: end;
+//         font-family: "Novecento-normal";
 
-        ul .page_item{
-          margin-right: 15px;
-        }
-      }
-    }
-  }
-}
+//         ul .page_item {
+//           margin-right: 15px;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .post-template-default {
+//   header {
+//     nav {
+//       position: unset;
+//       // border-bottom: 1px solid $color__border-solid;
+//     }
+//   }
+// }

@@ -282,14 +282,16 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Merriweather-normal";
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  font-family: 'Novecento-normal';
+  text-transform: uppercase; }
 
 /* Copy */
 p {
@@ -468,9 +470,9 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: #248a83; }
   a:visited {
-    color: purple; }
+    color: #248a83; }
   a:hover, a:focus, a:active {
     color: #2f1339; }
   a:focus {
@@ -718,38 +720,46 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
-footer {
+.site-footer {
   height: 330px;
-  padding-left: 80px;
-  padding-right: 100px;
-  padding-top: 10px;
+  padding-left: 375px;
+  padding-right: 375px;
+  padding-top: 40px;
   background-image: url("../../images/dark-wood.png");
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 5fr 1fr;
   color: white;
-  font-family: 'Merriweather-normal'; }
-  footer .title {
+  font-family: "Merriweather-normal"; }
+  .site-footer .title {
     color: #d99054;
     margin-top: 0px;
     margin-bottom: 15px;
-    font-family: 'Novecento-bold'; }
-  footer .spaced {
+    font-family: "Novecento-bold"; }
+  .site-footer .spaced {
     margin-right: 10px; }
-  footer .contact-info-2 {
+  .site-footer .contact-info-2 {
     grid-column: 1/2;
     grid-row: 1/2; }
-  footer .buz-hours-4 {
+  .site-footer .buz-hours-4 {
     grid-column: 2/3;
     grid-row: 1/2; }
-  footer .logo {
+  .site-footer .logo {
     grid-column: 4/5;
     grid-row: 1/2; }
-  footer .copyright {
+  .site-footer .copyright {
     grid-column: 1/5;
     grid-row: 2/3;
     justify-self: center;
-    font-family: 'Novecento-normal'; }
+    font-family: "Novecento-normal"; }
+  .site-footer a {
+    text-decoration: none;
+    color: white; }
+    .site-footer a:visited {
+      color: white; }
+    .site-footer a:hover {
+      color: white;
+      text-decoration: underline; }
 
 .page-id-25 .entry-header {
   display: -webkit-box;
@@ -760,7 +770,7 @@ footer {
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
-  height: 500px;
+  height: 100vh;
   color: white;
   width: 100%;
   -webkit-box-pack: center;
@@ -770,24 +780,29 @@ footer {
       -ms-flex-align: center;
           align-items: center; }
 
+.page-id-25 .entry-content {
+  padding-left: 550px;
+  padding-right: 550px; }
+  .page-id-25 .entry-content h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-family: 'Novecento-bold';
+    font-size: 2.25rem; }
+
+.page-id-25 .entry-title {
+  font-size: 3rem; }
+
 .page-id-25 nav a:visited {
   color: white; }
 
 .page-id-25 nav a:hover {
   color: #f0e4d1; }
 
-.page-template-default header nav {
-  position: absolute;
-  display: grid;
-  grid-template-columns: 1fr 4fr 3fr;
-  grid-template-rows: 1fr; }
-  .page-template-default header nav img {
-    height: 40px;
-    grid-column: 1/2; }
-  .page-template-default header nav .menu {
-    grid-column: 3/4;
-    -ms-flex-item-align: center;
-        align-self: center;
-    justify-self: end; }
-    .page-template-default header nav .menu ul .page_item {
-      margin-right: 15px; }
+.single-post .site-content {
+  width: 1120px;
+  margin-left: auto;
+  margin-right: auto; }

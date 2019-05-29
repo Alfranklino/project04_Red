@@ -30,11 +30,21 @@ let mainSection = document.getElementById('contact-info-2');
 
 // console.log($);
 
+// $ = jQuery.noConflict(true);
+
+// (function ($) {
+//     console.log($('#contact-info-2').$('.contact-info').$('p:nth-child(3)'));
+
+// })(jQuery);
+
+
+
+
 document.addEventListener('DOMContentLoaded', function (event) {
     let mainSection = document.getElementById('contact-info-2');
     let nextSection = mainSection.getElementsByClassName('contact-info')[0];
     let finalElement = nextSection.getElementsByTagName('p')[2];
-    // console.log(finalElement);
+    // console.log(finalElement);/
     finalElement.style.display = "none";
 
     let mainSection1 = document.getElementById('contact-info-3');
@@ -43,4 +53,17 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // console.log(finalElement1);
     finalElement1.style.display = "none";
 
-})
+    // let imgPost = document.getElementsByClassName('attachment-large')[0];
+    // imgPost.style.display = "none";
+
+    console.log(".*.");
+
+});
+
+jQuery(document).ready(function( $ ) {
+	
+	// $ Works! You can test it with next line if you like
+	console.log($);
+	
+});
+
