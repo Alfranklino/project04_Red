@@ -11,42 +11,15 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 
 
-		<?php while (have_posts()) : the_post(); ?>
+	<?php $bob = ['taxonomy' => 'product-type', 'hide_empty' => 0,];
+      $products_types = get_terms($bob);
+      ?>
 
-			<?php
-			$taxonomy = 'product-type';
-
-			// Get the term IDs assigned to post.
-			$post_terms = wp_get_object_terms($post->ID, $taxonomy, array('fields' => 'ids'));
-			$post_terms = array_unique($post_terms);
-			// Separator between links.
-			$separator = ', ';
-
-			if (!empty($post_terms) && !is_wp_error($post_terms)) {
-
-
-
-				$term_ids = implode(',', $post_terms);
-
-				$terms = wp_list_categories(array(
-					'title_li' => '',
-					'style'    => 'none',
-					'echo'     => false,
-					'taxonomy' => $taxonomy,
-					'include'  => $term_ids
-				));
-
-
-				$terms = rtrim(trim(str_replace('<br />',  $separator, $terms)), $separator);
-
-				// Display post categories.
-
-				echo  $terms;
-			}
-			?>
-
-		<?php endwhile; ?>
-
+      <?php foreach($products_types as $types):?>
+      <a href="<?php  echo get_term_link($types);?>"><?php  echo $types->name;?></p></a>
+	  <?php echo get_term_thumbnail($types->term_taxonomy_id) ?>
+	  <?php echo category_description( $types->term_taxonomy_id ); ?> 
+      <?php endforeach ;?>
 
 
 

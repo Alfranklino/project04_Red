@@ -47,23 +47,30 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // console.log(finalElement);/
     finalElement.style.display = "none";
 
+
     let mainSection1 = document.getElementById('contact-info-3');
-    let nextSection1 = mainSection1.getElementsByClassName('contact-info')[0];
-    let finalElement1 = nextSection1.getElementsByClassName('social')[0];
-    // console.log(finalElement1);
-    finalElement1.style.display = "none";
+
+    if (mainSection1 != null) {
+        let nextSection1 = mainSection1.getElementsByClassName('contact-info')[0];
+        let finalElement1 = nextSection1.getElementsByClassName('social')[0];
+        // console.log(finalElement1);
+        finalElement1.style.display = "none";
+    }
+
+
 
     // let imgPost = document.getElementsByClassName('attachment-large')[0];
     // imgPost.style.display = "none";
 
-    console.log(".*.");
+    console.log("...");
 
 });
 
-jQuery(document).ready(function( $ ) {
-	
-	// $ Works! You can test it with next line if you like
-	console.log($);
-	
+jQuery(document).ready(function ($) {
+
+    // $ Works! You can test it with next line if you like
+    console.log($);
+    
+
 });
 

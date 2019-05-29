@@ -10,3 +10,20 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
+@mixin style-button-link {
+	text-transform: uppercase;
+    font-family: "Novecento-normal";
+    display: inline-block;
+    margin-bottom: 50px;
+    color: black;
+    border: 1px solid black;    
+    padding: 5px 25px;
+
+    &:hover {
+      background-color: $color__bck_single-post-title;
+      color: white;
+      border: 1px solid $color__bck_single-post-title;
+    }
+	
+}

@@ -43,6 +43,53 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -470,7 +517,8 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: #248a83; }
+  color: #248a83;
+  text-decoration: none; }
   a:visited {
     color: #248a83; }
   a:hover, a:focus, a:active {
@@ -481,11 +529,69 @@ a {
     outline: 0; }
 
 /* Menus */
+.page-template-default .site-header .main-navigation a {
+  color: white; }
+  .page-template-default .site-header .main-navigation a:visited {
+    color: white; }
+  .page-template-default .site-header .main-navigation a:hover {
+    color: #f0e4d1; }
+
+.page-template-default .site-header,
+.blog .site-header,
+.single .site-header,
+.archive .site-header {
+  position: absolute;
+  width: 100%; }
+  .page-template-default .site-header .main-navigation,
+  .blog .site-header .main-navigation,
+  .single .site-header .main-navigation,
+  .archive .site-header .main-navigation {
+    width: 1120px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    height: 50px; }
+    .page-template-default .site-header .main-navigation a,
+    .blog .site-header .main-navigation a,
+    .single .site-header .main-navigation a,
+    .archive .site-header .main-navigation a {
+      grid-column: 1/2; }
+      .page-template-default .site-header .main-navigation a img,
+      .blog .site-header .main-navigation a img,
+      .single .site-header .main-navigation a img,
+      .archive .site-header .main-navigation a img {
+        height: 45px;
+        width: auto; }
+    .page-template-default .site-header .main-navigation .menu-main-menu-container,
+    .blog .site-header .main-navigation .menu-main-menu-container,
+    .single .site-header .main-navigation .menu-main-menu-container,
+    .archive .site-header .main-navigation .menu-main-menu-container {
+      grid-column: 3/4;
+      -ms-flex-item-align: center;
+          align-self: center;
+      justify-self: end;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.2); }
+      .page-template-default .site-header .main-navigation .menu-main-menu-container .menu-item,
+      .blog .site-header .main-navigation .menu-main-menu-container .menu-item,
+      .single .site-header .main-navigation .menu-main-menu-container .menu-item,
+      .archive .site-header .main-navigation .menu-main-menu-container .menu-item {
+        margin-right: 15px; }
+
+.blog .site-header,
+.archive .site-header,
+.single .site-header {
+  position: unset;
+  border-bottom: 1px solid #e1e1e1; }
+
 .main-navigation {
   clear: both;
   display: block;
-  float: left;
-  width: 100%; }
+  width: 100%;
+  font-family: "Novecento-normal";
+  /*Mine*/
+  text-transform: uppercase;
+  /*Mine*/ }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -618,6 +724,15 @@ a {
 .widget_search .search-submit {
   display: none; }
 
+.widget-area #archives-2 ul {
+  margin-left: 0; }
+  .widget-area #archives-2 ul li {
+    display: block; }
+
+.title {
+  text-transform: uppercase;
+  font-family: 'Novecento-bold'; }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -720,6 +835,24 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.blog #page .site-content, .archive #page .site-content, .single #page .site-content {
+  width: 1120px;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding-top: 0px; }
+  .blog #page .site-content .content-area,
+  .blog #page .site-content .widget-area, .archive #page .site-content .content-area,
+  .archive #page .site-content .widget-area, .single #page .site-content .content-area,
+  .single #page .site-content .widget-area {
+    padding-top: 7vh; }
+  .blog #page .site-content .content-area, .archive #page .site-content .content-area, .single #page .site-content .content-area {
+    padding-right: 7vh; }
+  .blog #page .site-content .widget-area, .archive #page .site-content .widget-area, .single #page .site-content .widget-area {
+    border-left: 1px solid #e1e1e1;
+    padding-left: 7vh; }
+
 .site-footer {
   height: 330px;
   padding-left: 375px;
@@ -761,6 +894,7 @@ object {
       color: white;
       text-decoration: underline; }
 
+/*A part */
 .page-id-25 .entry-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -781,8 +915,9 @@ object {
           align-items: center; }
 
 .page-id-25 .entry-content {
-  padding-left: 550px;
-  padding-right: 550px; }
+  width: 1120px;
+  margin-right: auto;
+  margin-left: auto; }
   .page-id-25 .entry-content h2 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -794,15 +929,49 @@ object {
     font-size: 2.25rem; }
 
 .page-id-25 .entry-title {
-  font-size: 3rem; }
-
-.page-id-25 nav a:visited {
-  color: white; }
-
-.page-id-25 nav a:hover {
-  color: #f0e4d1; }
+  font-size: 3.75rem;
+  font-family: 'Novecento-bold'; }
 
 .single-post .site-content {
   width: 1120px;
   margin-left: auto;
   margin-right: auto; }
+
+.blog .content-area img {
+  width: auto;
+  height: 590px; }
+
+.blog .content-area .type-post .entry-header {
+  position: relative; }
+  .blog .content-area .type-post .entry-header .entry-title {
+    position: absolute;
+    top: 50px;
+    width: 600px;
+    padding-left: 20px;
+    background-color: #248a83; }
+    .blog .content-area .type-post .entry-header .entry-title a {
+      color: white;
+      font-family: "Novecento-bold";
+      font-size: 2.5rem; }
+  .blog .content-area .type-post .entry-header .entry-meta {
+    text-transform: uppercase;
+    font-family: "Novecento-normal";
+    color: white;
+    background-color: #248a83;
+    padding: 3px 10px;
+    position: absolute;
+    bottom: 6px;
+    right: 0; }
+
+.blog .readmore {
+  text-transform: uppercase;
+  font-family: "Novecento-normal";
+  display: inline-block;
+  margin-bottom: 50px;
+  color: black;
+  border: 1px solid black;
+  padding: 5px 25px; }
+  .blog .readmore:hover {
+    background-color: #248a83;
+    color: white;
+    border: 1px solid #248a83; }

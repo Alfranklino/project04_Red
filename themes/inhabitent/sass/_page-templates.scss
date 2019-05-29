@@ -8,3 +8,29 @@
 
 /* Front page */
 
+.blog, .archive, .single {
+    #page {
+      .site-content {
+        width: 1120px;
+        margin-right: auto;
+        margin-left: auto;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        padding-top: 0px;
+  
+        .content-area,
+        .widget-area {
+          padding-top: 7vh;
+        }
+.content-area{
+    padding-right: 7vh;
+}
+
+        .widget-area {
+          border-left: 1px solid $color__border-solid;
+          padding-left: 7vh;
+          
+        }
+      }
+    }
+  }
