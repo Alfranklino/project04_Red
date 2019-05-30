@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // let imgPost = document.getElementsByClassName('attachment-large')[0];
     // imgPost.style.display = "none";
 
-    console.log("...");
+    // console.log("...");
 
 });
 
@@ -70,7 +70,11 @@ jQuery(document).ready(function ($) {
 
     // $ Works! You can test it with next line if you like
     console.log($);
-    
+    console.log('$');
+    if ($('.comment-form-cookies-consent') != null) {
+        $('.comment-form-cookies-consent').hide();
+    }
+
 
 });
 

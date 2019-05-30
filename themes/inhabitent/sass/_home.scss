@@ -1,42 +1,8 @@
 .blog {
-  .content-area {
-    img {
-      width: auto;
-      height: 590px;
-    }
 
-    .type-post {
-      .entry-header {
-        position: relative;
+$selector-title: ".entry-header a";
 
-        .entry-title {
-          position: absolute;
-          top: 50px;
-
-          width: 600px;
-          padding-left: 20px;
-          a {
-            color: white;
-            font-family: "Novecento-bold";
-            font-size: 2.5rem;
-          }
-          background-color: $color__bck_single-post-title;
-        }
-
-        .entry-meta {
-          text-transform: uppercase;
-          font-family: "Novecento-normal";
-          color: white;
-          background-color: $color__bck_single-post-title;
-          padding: 3px 10px;
-
-          position: absolute;
-          bottom: 6px;
-          right: 0;
-        }
-      }
-    }
-  }
+@include style-entry-title($selector-title);
 
   .readmore {
     @include style-button-link();

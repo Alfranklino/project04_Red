@@ -22,9 +22,8 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+				<?php get_template_part( 'template-parts/content' );?>
+				<a class="readmore" href="<?php esc_url (the_permalink()) ?>">Read More &rarr;</a>
 
 			<?php endwhile; ?>
 
@@ -35,6 +34,8 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
+
+		
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

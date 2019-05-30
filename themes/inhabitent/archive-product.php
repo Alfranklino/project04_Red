@@ -17,8 +17,8 @@ get_header(); ?>
 
       <?php foreach($products_types as $types):?>
       <a href="<?php  echo get_term_link($types);?>"><?php  echo $types->name;?></p></a>
-	  <?php echo get_term_thumbnail($types->term_taxonomy_id) ?>
-	  <?php echo category_description( $types->term_taxonomy_id ); ?> 
+	  <!-- <?php echo get_term_thumbnail($types->term_taxonomy_id) ?>
+	  <?php echo category_description( $types->term_taxonomy_id ); ?>  -->
       <?php endforeach ;?>
 
 

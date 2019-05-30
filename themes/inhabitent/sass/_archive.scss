@@ -1,0 +1,15 @@
+.archive{
+    $selector-title: ".entry-header a";
+    @include style-entry-title($selector-title);
+
+    .readmore {
+        @include style-button-link();
+      }
+
+      .page-title{
+        font-family: "Novecento-bold";
+        font-size: 2rem;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+      }
+}
