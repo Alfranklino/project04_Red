@@ -61,24 +61,25 @@ gulp.task(
 
 // Set-up BrowserSync and watch
 
-gulp.task('browser-sync', function() {
-  const files = [
-    './build/css/*.css',
-    './build/js/*.js',
-    './*.php',
-    './**/*.php'
-  ];
+// gulp.task('browser-sync', function() {
+//   const files = [
+//     './build/css/*.css',
+//     './build/js/*.js',
+//     './*.php',
+//     './**/*.php'
+//   ];
 
-  browserSync.init(files, {
-    proxy: 'http://localhost:8080/red_prj_04/'
-  });
+//   browserSync.init(files, {
+//     proxy: 'http://localhost:8080/red_prj_04/'
+//   });
 
-  gulp.watch(files).on('change', browserSync.reload);
-});
+//   gulp.watch(files).on('change', browserSync.reload);
+// });
 
 gulp.task('watch', function() {
   gulp.watch('js/*.js', gulp.series('scripts'));
   gulp.watch('sass/*.scss', gulp.series('sass'));
 });
 
-gulp.task('default', gulp.parallel('browser-sync', 'watch'));
+// gulp.task('default', gulp.parallel('browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('watch'));
