@@ -13,6 +13,10 @@
 			<?php the_post_thumbnail( 'large' ); ?>
 		<?php endif; ?>
 
+		<?php if (is_front_page()) : ?>
+<img class="home-logo" src="<?php echo get_template_directory_uri().'/images/logos/' ?>inhabitent-logo-full.svg" alt="Inhabitent Logo"/>
+<?php endif; ?>
+
 		 <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?> 
 
 		<?php if ( 'post' === get_post_type() ) : ?>

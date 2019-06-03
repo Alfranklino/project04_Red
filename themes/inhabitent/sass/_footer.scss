@@ -1,10 +1,10 @@
 .site-footer {
   height: 330px;
-  padding-left: $base__indent-unit * 1.5;
-  padding-right: $base__indent-unit * 1.5;
+  padding-left: 200px;
+  padding-right: 200px;
   padding-top: 40px;
   background-image: url($path__bkg-footer);
-  display: grid;
+  display: grid;  
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 5fr 1fr;
   color: white;

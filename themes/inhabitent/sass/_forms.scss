@@ -8,23 +8,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: $color__bck_single-post-title;
-
-  background: $color__bck_single-post-title;
-
-  color: white;
-
-  font-family: "Novecento-normal";
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  padding: 5px 6px;
-  width: 90px;
-  &:hover {
-	  border-color: $color__bck_form_button_hover;
-	  background-color: $color__bck_form_button_hover;
-  }
+  @include style-button-link-green();
+  width:90px;
 }
 
 /* Fields */

@@ -27,6 +27,26 @@
   }
 }
 
+@mixin style-button-link-green{
+  border: 1px solid;
+          border-color: $color__bck_single-post-title;
+
+          background: $color__bck_single-post-title;
+
+          color: white;
+
+          font-family: "Novecento-normal";
+          text-transform: uppercase;
+          font-size: 0.8rem;
+          letter-spacing: 1px;
+          padding: 5px 6px;
+          width: 130px;
+          &:hover {
+            border-color: $color__bck_form_button_hover;
+            background-color: $color__bck_form_button_hover;
+          }
+}
+
 @mixin style-entry-title($selector-title) {
   .content-area {
     .entry-header {
@@ -87,3 +107,27 @@
     }
   }
 }
+
+
+
+// object-fit: cover;
+
+// <article class="adventure"
+// 						<?php 
+// 							echo 'style="background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(';
+// 							the_post_thumbnail_url();
+// 							echo ')';
+// 							?>
+// 						<?php echo ';">'; ?>
+
+							
+// 							<a href="<?php echo esc_url(the_permalink()); ?>" class="term_link"><?php echo the_title() ?></a>
+// 							<a class="readmore" href="<?php esc_url(the_permalink()) ?>">Read More &rarr;</a>
+
+
+// <article class="adventure">
+
+// 							<img src="<?php the_post_thumbnail_url(); ?>">
+// 							<a href="<?php echo esc_url(the_permalink()); ?>" class="term_link"><?php echo the_title() ?></a>
+// 							<a class="readmore" href="<?php esc_url(the_permalink()) ?>">Read More &rarr;</a>
+// 						</article>
