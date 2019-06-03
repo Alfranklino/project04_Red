@@ -1,0 +1,33 @@
+.adventure-template-default {
+  .site-content {
+    .entry-header {
+     img{
+        // height: 100vh;
+        width: 100%;
+     }
+    }
+
+    .entry-content, .entry-title, .entry-meta{
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .entry-content{
+        font-family: 'Merriweather-normal';
+    }
+
+    .entry-title{
+        font-family: 'Novecento-bold';
+    }
+
+    .entry-meta{
+        text-transform: uppercase;
+        font-family: 'Novecento-normal';
+    }
+  }
+
+  .widget-area {
+    display: none;
+  }
+}

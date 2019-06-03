@@ -824,7 +824,7 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
-.blog #page .site-content, .archive #page .site-content, .single #page .site-content {
+.blog #page .site-content, .archive #page .site-content, .single-product #page .site-content, .single-post #page .site-content {
   width: 1120px;
   margin-right: auto;
   margin-left: auto;
@@ -833,12 +833,13 @@ object {
   padding-top: 0px; }
   .blog #page .site-content .content-area,
   .blog #page .site-content .widget-area, .archive #page .site-content .content-area,
-  .archive #page .site-content .widget-area, .single #page .site-content .content-area,
-  .single #page .site-content .widget-area {
+  .archive #page .site-content .widget-area, .single-product #page .site-content .content-area,
+  .single-product #page .site-content .widget-area, .single-post #page .site-content .content-area,
+  .single-post #page .site-content .widget-area {
     padding-top: 7vh; }
-  .blog #page .site-content .content-area, .archive #page .site-content .content-area, .single #page .site-content .content-area {
+  .blog #page .site-content .content-area, .archive #page .site-content .content-area, .single-product #page .site-content .content-area, .single-post #page .site-content .content-area {
     padding-right: 7vh; }
-  .blog #page .site-content .widget-area, .archive #page .site-content .widget-area, .single #page .site-content .widget-area {
+  .blog #page .site-content .widget-area, .archive #page .site-content .widget-area, .single-product #page .site-content .widget-area, .single-post #page .site-content .widget-area {
     border-left: 1px solid #e1e1e1;
     padding-left: 7vh; }
 
@@ -1441,3 +1442,24 @@ object {
             font-size: 1.2rem; }
           .page-id-22 .entry-content .section_adventures .adventures_list .adventure:nth-child(1) .readmore {
             position: absolute; }
+
+.adventure-template-default .site-content .entry-header img {
+  width: 100%; }
+
+.adventure-template-default .site-content .entry-content, .adventure-template-default .site-content .entry-title, .adventure-template-default .site-content .entry-meta {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.adventure-template-default .site-content .entry-content {
+  font-family: 'Merriweather-normal'; }
+
+.adventure-template-default .site-content .entry-title {
+  font-family: 'Novecento-bold'; }
+
+.adventure-template-default .site-content .entry-meta {
+  text-transform: uppercase;
+  font-family: 'Novecento-normal'; }
+
+.adventure-template-default .widget-area {
+  display: none; }
